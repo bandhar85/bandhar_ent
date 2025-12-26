@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const productDataBora = {
       mobiles: {
         title: 'Mobiles',
-        note: 'Bora Mobility: curated mobile imports for retail & channel partners.',
+        note: 'curated mobile imports for retail & channel partners.',
         subcategories: [
           { brand: 'iPhone', desc: 'Apple iPhones with warranty-ready imports.', types: ['iPhone 14', 'iPhone 13'] },
           { brand: 'Samsung', desc: 'Galaxy series imported for varied consumer segments.', types: ['Galaxy S23', 'Galaxy A54'] },
@@ -273,3 +273,4 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 }); // end DOMContentLoaded
+
