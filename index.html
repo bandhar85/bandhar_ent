@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bandhar Enterprises — Printer Purchase</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <!-- Meta -->
+  <meta name="description" content="Bandhar Enterprises — Professional printer import services. Home, office and industrial printers with global logistics, procurement and after-sales support." />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">
+        <div class="brand-logo" aria-hidden="true">BE</div>
+        <div class="brand-text">
+          <span class="company">Bandhar</span>
+          <span class="line">Enterprises</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <i class='bx bx-menu'></i>
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#products-bora" class="nav-link">Our Products</a>
+        <a href="#why" class="nav-link">Why Choose Us</a>
+        <a href="#overview" class="nav-link">Business Overview</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h1>Bandhar Enterprises</h1>
+        <p class="subtitle">Trusted Partner in Printer Import — local procurement, logistics and premium after-sales support for home, office and industrial printing solutions.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#products-bora">Explore Products</a>
+          <a class="btn btn-outline" href="#contact">Request a Quote</a>
+        </div>
+        <ul class="hero-highlights">
+          <li><strong>Established:</strong> Trusted supplier & trading partner</li>
+          <li><strong>Coverage:</strong> International shipping & customs expertise</li>
+          <li><strong>Support:</strong> Dedicated account & after-sales team</li>
+        </ul>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="device-mock">
+          <!-- Use your local uploaded illustration (replace path if needed) -->
+          <img src="images.jpeg" alt="Printers and logistics" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <p class="lead">
+        Bandhar Enterprises is a professional import company specializing in
+        <strong>printers, printing equipment, and consumer electronics</strong>.
+        With strong global sourcing capabilities and reliable logistics management,
+        we supply high-quality products for home, office, and industrial needs.
+      </p>
+
+      <div class="grid about-grid">
+        <div>
+          <h3>Our Expertise</h3>
+          <p>
+            We have proven expertise in <strong>printer import</strong>,
+            international procurement, quality checking, and delivery of
+            verified consumer electronic products. Our focus is on delivering
+            authentic, durable, and cost-effective technology to our clients.
+          </p>
+        </div>
+
+        <div>
+          <h3>Consumer Electronics</h3>
+          <p>
+            Along with printing equipment, we also trade a wide range of
+            <strong>consumer electronics</strong> including office devices and
+            digital accessories. All products are sourced from trusted
+            manufacturers to ensure performance and compliance.
+          </p>
+        </div>
+
+        <div>
+          <h3>Our Commitment</h3>
+          <p>
+            We are committed to transparent service, competitive pricing,
+            on-time delivery, and long-term partnerships. Customer satisfaction
+            and quality assurance are at the core of our business.
+          </p>
+        </div>
+      </div>
+
+      <!-- Vision & Mission -->
+      <div style="margin-top:18px;">
+        <div class="grid about-grid">
+          <div>
+            <h3>Our Mission</h3>
+            <p>To be the most reliable partner for companies seeking printing hardware and services — delivering quality products, on-time shipments and responsive support across borders.</p>
+          </div>
+
+          <div>
+            <h3>Our Values</h3>
+            <ul>
+              <li>Integrity in trade and compliance</li>
+              <li>Customer-first service and transparency</li>
+              <li>Quality-driven supplier selection</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products — Bora Mobility LLP (placed above A3 Mobility) -->
+  <section id="products-bora" class="section section-alt products-creative bora-creative">
+    <div class="container">
+      <h2 class="section-title">Bandhar Enterprises — Products</h2>
+      <p class="lead">Imported product ranges for Bora Mobility LLP. Click a category to view brands and product types with descriptions.</p>
+
+      <div class="product-tabs-bora" role="tablist" aria-label="Bora product categories">
+        <button class="tab-bora active" data-category="mobiles" role="tab" aria-selected="true">Mobiles</button>
+        <button class="tab-bora" data-category="laptops" role="tab" aria-selected="false">Laptops</button>
+        <button class="tab-bora" data-category="printers" role="tab" aria-selected="false">Printers</button>
+        <!-- <button class="tab-bora" data-category="ecommerce" role="tab" aria-selected="false">E-commerce</button> -->
+      </div>
+
+      <div id="productContentBora" class="product-content">
+        <!-- JS will render Bora category details here -->
+      </div>
+    </div>
+
+    <!-- Modal for Bora details -->
+    <div id="productModalBora" class="product-modal" aria-hidden="true">
+      <div class="modal-backdrop" id="modalBackdropBora"></div>
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitleBora">
+        <button class="modal-close" id="modalCloseBora" aria-label="Close">&times;</button>
+        <h3 id="modalTitleBora"></h3>
+        <p id="modalDescBora"></p>
+        <div id="modalTypesBora" class="modal-types"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="why" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Why Choose Bandhar Enterprises</h2>
+      <div class="grid why-grid">
+        <div class="why-item">
+          <i class='bx bx-check-circle'></i>
+          <h4>Reliable Sourcing</h4>
+          <p>We partner only with trusted manufacturers and verified distributors to ensure product authenticity.</p>
+        </div>
+        <div class="why-item">
+          <i class='bx bx-truck'></i>
+          <h4>Efficient Logistics</h4>
+          <p>Optimized routing and consolidated shipments reduce cost and transit time for international deliveries.</p>
+        </div>
+        <div class="why-item">
+          <i class='bx bx-headphone'></i>
+          <h4>Dedicated Support</h4>
+          <p>Account managers and technical support teams focused on fast responses and long-term relationships.</p>
+        </div>
+        <div class="why-item">
+          <i class='bx bx-shield-quarter'></i>
+          <h4>Regulatory Compliance</h4>
+          <p>Experienced team handling import regulations and documentation for smooth customs processing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Business Overview -->
+  <section id="overview" class="section">
+    <div class="container">
+      <h2 class="section-title">Business Overview</h2>
+      <p class="lead">Bandhar Enterprises operates across sourcing, sales and logistics for printing equipment. We serve:</p>
+
+      <ul class="overview-list">
+        <li>Distributors & Resellers — Wholesale quantities and reseller programs.</li>
+        <li>Corporate & Enterprise — Fleet procurement, managed print services and lifecycle management.</li>
+        <li>Retail & E-commerce — Packaged consumer SKUs and small-batch exports.</li>
+      </ul>
+
+      <div class="overview-stats">
+        <div>
+          <strong>100+</strong>
+          <span>Products & SKUs</span>
+        </div>
+        <div>
+          <strong>24/7</strong>
+          <span>Customer support & logistics monitoring</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="grid contact-grid">
+        <div class="contact-card">
+          <h4>Get in touch</h4>
+          <p>For quotations, sourcing enquiries and distributor partnerships, contact our sales team.</p>
+          <p><strong>Email:</strong> <a href="mailto:purchase@bandharenterprises.com">purchase@bandharenterprises.com</a><br/>
+          <!-- <p><strong>Head Office:</strong> Pune, India</p> -->
+        </div>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <label>
+            <span>Name</span>
+            <input type="text" id="name" name="name" placeholder="Full name" required />
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input type="email" id="email" name="email" placeholder="you@company.com" required />
+          </label>
+
+          <label>
+            <span>Company</span>
+            <input type="text" id="company" name="company" placeholder="Company (optional)" />
+          </label>
+
+          <label>
+            <span>Message</span>
+            <textarea id="message" name="message" rows="6" placeholder="Tell us about your requirement" required></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="button" id="clearBtn" class="btn btn-outline">Clear</button>
+          </div>
+
+          <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p>&copy; <span id="year"></span> Bandhar Enterprises. All rights reserved.</p>
+      </div>
+      <div class="footer-right">
+        <a href="mailto:purchase@bandharenterprises.com" class="footer-link">purchase@bandharenterprises.com</a>
+        <span class="pipe">|</span>
+        <a href="#contact" class="footer-link">Request Quote</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

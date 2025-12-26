@@ -1,0 +1,262 @@
+/* Banbhar / Bandhar Enterprises — styles.css
+   Clean corporate layout: blue / grey / white / black theme
+*/
+
+/* Basic reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
+body {
+  font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #1f2937;
+  background: #eeeff1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.45;
+  font-size: 16px;
+}
+
+/* Utility container */
+.container { width: 92%; max-width: 1200px; margin: 0 auto; }
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: #f8f7fd;
+  border-bottom: 1px solid #e6e9ee;
+  z-index: 1000;
+}
+.header-inner {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 1rem;
+  padding: 14px 0;
+}
+
+/* Brand */
+.brand { display:flex; align-items:center; gap: 12px; text-decoration: none; color: #0b2033; }
+.brand-logo {
+  width:44px; height:44px; border-radius:8px;
+  background: linear-gradient(135deg,#0b66b2 0%, #0b8fb2 100%);
+  color: white; display:flex; align-items:center; justify-content:center;
+  font-weight:700; font-size:18px;
+  box-shadow: 0 4px 12px rgba(11,103,178,0.12);
+}
+.brand-text { line-height:1; }
+.brand-text .company { display:block; font-weight:700; font-size:16px; }
+.brand-text .line { display:block; font-size:12px; color:#617083; }
+
+/* Navigation */
+.nav { display:flex; gap: 18px; align-items:center; }
+.nav-link { color:#0b2033; text-decoration:none; padding:8px 10px; font-size:15px; border-radius:6px; }
+.nav-link:hover { background:#eef6ff; color:#0b66b2; }
+.nav-link.active { background:#0b66b2; color:white; box-shadow: 0 6px 18px rgba(6,86,146,0.12); }
+
+/* Mobile toggle */
+.nav-toggle { display:none; background:transparent; border:0; font-size:22px; color:#0b2033; }
+
+/* Hero */
+.hero { padding:48px 0 28px; }
+.hero-grid { display:grid; grid-template-columns: 1fr 460px; gap: 36px; align-items:center; }
+.hero-content h1 { font-size:34px; color:#07263b; margin-bottom:8px; }
+.hero .subtitle { color:#334e63; margin-bottom:18px; font-size:16px; max-width:620px; }
+.hero-ctas { display:flex; gap:12px; margin-bottom:14px; }
+.btn {
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:10px 16px; font-weight:600; border-radius:8px;
+  text-decoration:none; cursor:pointer; border:1px solid transparent;
+}
+.btn-primary { background:#0b66b2; color:white; box-shadow: 0 8px 20px rgba(11,102,178,0.12); border-color: rgba(11,102,178,0.15); }
+.btn-primary:hover { transform: translateY(-2px); }
+.btn-outline { background:transparent; color:#0b66b2; border-color:#b9d8ff; }
+.hero-highlights { margin-top:12px; display:flex; gap:16px; list-style:none; color:#4b626f; font-size:14px; }
+
+/* Hero visual */
+.hero-visual .device-mock { width:100%; max-width:460px; border-radius:12px; overflow:hidden; box-shadow: 0 12px 40px rgba(11,102,178,0.06); }
+.hero-visual img { width:100%; height:100%; object-fit:cover; display:block; }
+
+/* Sections */
+.section { padding:48px 0; }
+.section-alt { background: #ffffff; border-top: 1px solid #e6e9ee; border-bottom: 1px solid #e6e9ee; }
+.section-title { font-size:22px; color:#07263b; margin-bottom:12px; font-weight:700; }
+.lead { color:#344a57; margin-bottom:18px; }
+
+/* Grids */
+.grid { display:grid; gap:18px; }
+.about-grid { grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); align-items:start; }
+.products-grid { grid-template-columns: repeat(auto-fit, minmax(230px,1fr)); }
+.services-grid { grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); }
+.why-grid { grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); }
+.contact-grid { grid-template-columns: 1fr 420px; align-items:flex-start; gap:28px; }
+
+/* Cards & items */
+.product-card, .service, .why-item, .contact-card {
+  background: linear-gradient(180deg,#ffffff,#fbfdff);
+  border: 1px solid #e6eef7;
+  padding:18px;
+  border-radius:10px;
+  box-shadow: 0 6px 18px rgba(8,30,44,0.04);
+}
+.product-icon { font-size:28px; color:#0b66b2; margin-bottom:8px; }
+
+/* Why items */
+.why-item { display:flex; gap:12px; align-items:flex-start; }
+.why-item i { font-size:28px; color:#0b66b2; }
+
+/* Overview */
+.overview-list { margin:18px 0 12px 18px; color:#334e63; }
+.overview-stats { display:flex; gap:24px; margin-top:14px; }
+.overview-stats > div { background:#f7fbff; border:1px solid #e6f0fb; padding:12px 18px; border-radius:8px; text-align:center; }
+.overview-stats strong { display:block; font-size:20px; color:#0b66b2; }
+
+/* Contact form */
+.contact-card p, .contact-card h4 { color:#102331; }
+.contact-form { background:#ffffff; border:1px solid #e9f0f7; padding:18px; border-radius:10px; }
+.contact-form label { display:block; margin-bottom:12px; font-size:14px; color:#425a66; }
+.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
+  width:100%; padding:10px 12px; border-radius:8px; border:1px solid #dbe8f2; background:#fbfeff;
+  font-size:14px; color:#0b2033;
+}
+.form-actions { display:flex; gap:12px; margin-top:8px; align-items:center; }
+.form-status { margin-top:10px; color:#0b66b2; font-weight:600; }
+
+/* Footer */
+.site-footer { background:#0b2033; color:#e6f3ff; padding:18px 0; margin-top:24px; }
+.footer-inner { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.footer-link { color: #d7eefc; text-decoration:none; margin:0 6px; }
+.pipe { color: #4c6d84; margin: 0 6px; }
+
+/* Responsive */
+@media (max-width: 980px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .overview-stats { flex-direction: column; gap:10px; }
+  .nav { display:none; position: absolute; top:68px; right:16px; background:white; border:1px solid #e6eef7; padding:12px; border-radius:10px; box-shadow: 0 8px 28px rgba(9,30,50,0.08); flex-direction:column; }
+  .nav-link { display:block; padding:10px 12px; }
+  .nav-toggle { display:block; }
+}
+
+@media (max-width: 520px) {
+  .brand-text .company { font-size:14px; }
+  .brand-text .line { font-size:11px; }
+  .hero .subtitle { font-size:15px; }
+  .section-title { font-size:18px; }
+}
+
+/* ---------- Product Explorer / Creative UI ---------- */
+
+/* Bora Mobility LLP product section variant */
+.bora-creative {
+  /* subtle different decorative image for Bora */
+  background-image: linear-gradient(180deg, rgba(243,250,255,0.6), rgba(243,250,255,0.95)),
+                    url('/mnt/data/ff9f7d7a-6399-4437-9187-bbd9c2f286eb.png');
+  background-repeat:no-repeat;
+  background-position:right 20px top;
+  background-size:380px;
+  border-radius:12px;
+  padding:28px 0 48px;
+}
+
+/* Tabs for Bora */
+.product-tabs-bora { display:flex; gap:12px; margin:18px 0; flex-wrap:wrap; }
+.tab-bora {
+  padding:10px 14px; border-radius:12px; border:1px solid #D7ECF7;
+  background: linear-gradient(180deg,#fff,#f6fbff);
+  color:#003B73; cursor:pointer; font-weight:700; box-shadow:0 6px 18px rgba(3,59,115,0.03);
+  transition: all .18s ease;
+}
+.tab-bora:hover { transform: translateY(-3px); }
+.tab-bora.active { background: linear-gradient(180deg,#003B73,#0077B6); color:#fff; box-shadow:0 12px 34px rgba(0,59,115,0.14); }
+
+/* Generic product tabs (A3 / other) */
+.product-tabs { display:flex; gap:12px; margin:18px 0; flex-wrap:wrap; }
+.tab {
+  padding:10px 14px; border-radius:12px; border:1px solid #D7ECF7;
+  background: linear-gradient(180deg,#fff,#f6fbff);
+  color:#003B73; cursor:pointer; font-weight:700; box-shadow:0 6px 18px rgba(3,59,115,0.03);
+  transition: all .18s ease;
+}
+.tab:hover { transform: translateY(-3px); }
+.tab.active { background: linear-gradient(180deg,#003B73,#0077B6); color:#fff; box-shadow:0 12px 34px rgba(0,59,115,0.14); }
+
+/* product content layout */
+.product-content { margin-top:18px; display:grid; gap:18px; }
+
+/* product note */
+.product-note {
+  padding:14px 18px; border-radius:10px;
+  background: linear-gradient(90deg, rgba(7,98,141,0.04), rgba(7,98,141,0.03));
+  border:1px solid #D7ECF7; color:#1d4664;
+}
+
+/* subcategory grid & basic card */
+.subcategory-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:18px; margin-top:8px; }
+
+.subcard {
+  position: relative;
+  border-radius:12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), #fff);
+  border: 1px solid rgba(3,59,115,0.06);
+  padding:14px;
+  box-shadow: 0 10px 30px rgba(3,59,115,0.04);
+  transition: transform .22s ease, box-shadow .22s ease;
+  cursor: pointer;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  min-height:120px;
+}
+
+.subcard::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 8px;
+  background: linear-gradient(90deg, #0077B6, #48CAE4);
+  border-top-left-radius:12px;
+  border-top-right-radius:12px;
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.subcard h4 { margin:0; font-size:16px; color:#003B73; font-weight:800; }
+.subcard p { margin:0; color:#254a61; font-size:14px; line-height:1.45; }
+.subcard .types { margin-top:auto; font-size:13px; color:#27557c; display:flex; gap:8px; flex-wrap:wrap; }
+
+.subcard:hover { transform: translateY(-10px); box-shadow: 0 20px 48px rgba(3,59,115,0.12); }
+
+/* chips for example types */
+.chip {
+  background: rgba(7,119,182,0.06);
+  color: #0077B6;
+  padding:6px 10px;
+  border-radius:999px;
+  font-weight:600;
+  font-size:12px;
+  border: 1px solid rgba(7,119,182,0.08);
+}
+
+/* modal */
+.product-modal { display:none; }
+.product-modal.open { display:block; position:fixed; inset:0; z-index:2200; }
+.modal-backdrop { position:fixed; inset:0; background: rgba(6,15,28,0.48); }
+.modal-panel {
+  position: fixed; left:50%; top:50%; transform: translate(-50%,-50%);
+  width: min(720px, 92%); background: #fff; border-radius:12px;
+  padding:20px; box-shadow: 0 30px 80px rgba(3,59,115,0.2); z-index:2210;
+}
+.modal-close { position:absolute; right:14px; top:10px; background:transparent; border:0; font-size:22px; cursor:pointer; color:#6a7f8a; }
+.modal-types { margin-top:12px; display:flex; gap:8px; flex-wrap:wrap; }
+
+/* Accessibility focus */
+.tab:focus, .tab-bora:focus, .subcard:focus, .modal-close:focus { outline: 3px solid rgba(72,202,228,0.22); outline-offset:3px; }
+
+/* Responsive tweaks */
+@media (max-width:720px) {
+  .products-creative, .bora-creative { background-size: 260px; background-position: right -20px top; padding-bottom:36px; }
+  .subcard { min-height: auto; }
+  .subcard::before { display:none; } /* hide strip on tiny cards */
+}
